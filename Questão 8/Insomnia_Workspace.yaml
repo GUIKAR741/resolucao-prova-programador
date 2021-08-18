@@ -1,0 +1,193 @@
+_type: export
+__export_format: 4
+__export_date: 2021-08-18T12:54:56.430Z
+__export_source: insomnia.desktop.app:v2020.3.3
+resources:
+  - _id: req_22aeade99c9f444e82e1d15db9fa8818
+    authentication: {}
+    body: {}
+    created: 1629285372534
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1629285372534
+    method: GET
+    modified: 1629285480637
+    name: getAlunos
+    parameters: []
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ BASE_URL }}/aluno/all"
+    _type: request
+  - _id: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    created: 1629285362066
+    description: ""
+    modified: 1629285362066
+    name: Prova Pleno
+    parentId: null
+    scope: null
+    _type: workspace
+  - _id: req_5df8fdd596d440ddbed6c629b7576745
+    authentication: {}
+    body: {}
+    created: 1629288404334
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1629166422749.375
+    method: GET
+    modified: 1629291249857
+    name: getAlunoId
+    parameters: []
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ BASE_URL }}/aluno/2"
+    _type: request
+  - _id: req_1f8cdec43f034ccfaebfe5646d8fe81a
+    authentication: {}
+    body: {}
+    created: 1629288399445
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1629047472964.75
+    method: GET
+    modified: 1629288457239
+    name: getAlunoMatricula
+    parameters: []
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ BASE_URL }}/aluno/matricula/415158"
+    _type: request
+  - _id: req_586c744c1f584e8ca0577519fb2661ed
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Guilherme",
+          "matricula": "420801",
+          "cidadeNatal": "Chorozinho",
+        	"sexo": "M",
+        	"idade": 30
+        }
+    created: 1629286367018
+    description: ""
+    headers:
+      - id: pair_0b4845a5aa664387ab238e530292faa4
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1628333774257
+    method: POST
+    modified: 1629291227117
+    name: addAluno
+    parameters: []
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ BASE_URL }}/aluno"
+    _type: request
+  - _id: req_67b69591f8054961b40a1785450ee257
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 1,
+          "nome": "Guilherme Nepomuceno",
+          "matricula": "415158",
+          "cidadeNatal": "Chorozinho",
+        	"sexo": "M",
+        	"idade": 21
+        }
+    created: 1629288619399
+    description: ""
+    headers:
+      - id: pair_0b4845a5aa664387ab238e530292faa4
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1627857975118.5
+    method: PUT
+    modified: 1629291232425
+    name: updateAluno
+    parameters: []
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ BASE_URL }}/aluno/1"
+    _type: request
+  - _id: req_815d95248b8f49f397a4e99e63214c0f
+    authentication: {}
+    body: {}
+    created: 1629287986210
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1627857975068.5
+    method: DELETE
+    modified: 1629291192732
+    name: deleteAluno
+    parameters: []
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ BASE_URL }}/aluno/3"
+    _type: request
+  - _id: env_7813417d8faf291ba1049237eb9dcefdc1ebcc80
+    color: null
+    created: 1629285362137
+    data:
+      BASE_URL: http://localhost:8080
+    dataPropertyOrder:
+      "&":
+        - BASE_URL
+    isPrivate: false
+    metaSortKey: 1629285362137
+    modified: 1629285411196
+    name: Base Environment
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    _type: environment
+  - _id: jar_7813417d8faf291ba1049237eb9dcefdc1ebcc80
+    cookies: []
+    created: 1629285362139
+    modified: 1629285362139
+    name: Default Jar
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    _type: cookie_jar
+  - _id: spc_dcff56f885cd49d8a8988011bf273a96
+    contentType: yaml
+    contents: ""
+    created: 1629285362076
+    fileName: Prova Pleno
+    modified: 1629285362076
+    parentId: wrk_cf521905fd6f45f0a531aff3c8c48aa2
+    _type: api_spec
